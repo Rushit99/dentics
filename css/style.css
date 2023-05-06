@@ -72,8 +72,9 @@ li {
 }
 .text-small {
   font-size: 18px;
-  margin-top: 22px;
+  margin-top: 15px;
   margin-bottom: 40px;
+  line-height: 25px;
 }
 .btn {
   border: none;
@@ -262,6 +263,7 @@ hr {
     font-weight: 600;
     font-size: 25px;
     line-height: 30px;
+    margin: 20px 0 10px 0;
   }
   .text-small {
     font-size: 12px;
@@ -271,13 +273,13 @@ hr {
   .learn-more {
     height: 35px;
     width: 130px;
-    font-size: 16px;
+    font-size: 13px;
     margin-left: 20px;
   }
   .btn {
     width: 130px;
     height: 35px;
-    font-size: 16px;
+    font-size: 13px;
   }
   .line {
     width: 25px;
@@ -418,6 +420,9 @@ hr {
   }
 }
 @media only screen and (max-width: 986px) {
+  .container-secondSection {
+    margin-top: 25px;
+   }
   .services {
     flex-direction: column;
     margin-left: 25px;
@@ -775,7 +780,7 @@ hr {
     text-align: center;
   }
   .service-details-right {
-    padding: 0px 25px 60px 25px;
+    padding: 0px 25px 50px 25px;
   }
   .service-details {
     display: block;
@@ -812,7 +817,7 @@ hr {
 }
 @media only screen and (max-width: 675px) {
   .service-details-left .text-big {
-    font-size: 30px;
+    font-size: 29px;
     line-height: 40px;
     padding: 0 0 15px 0;
   }
@@ -824,12 +829,13 @@ hr {
     font-size: 20px;
   }
   .service-details-left {
-    padding: 40px 25px 30px 25px;
+    padding: 10px 25px 30px 25px;
   }
 }
 @media only screen and (max-width: 570px) {
   .text-small {
     font-size: 12px;
+    line-height: 18px;
   }
 
   .service-details-left .text-big {
@@ -842,7 +848,8 @@ hr {
     border-bottom: none;
   }
   .details {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 46px;
   }
   .shield {
     align-items: start;
@@ -855,6 +862,9 @@ hr {
   .shield-icon {
     padding: 20px 0px 0px 0px;
   }
+  .shield-leftside {
+    margin-top: 30px;
+}
 }
 
 /* <!--------- Grid layout TASK 3 -----
@@ -896,7 +906,7 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
   row-gap: 40px;
   column-gap: 40px;
-  margin: 72px 60px 120px 60px;
+  margin: 72px 60px 60px 60px;
 }
 
 .feture-item {
@@ -951,7 +961,7 @@ hr {
   .feture {
     row-gap: 30px;
     column-gap: 30px;
-    margin: 50px 25px 80px 25px;
+    margin: 50px 25px 25px 25px;
   }
   .feture-item br {
     display: block;
@@ -975,15 +985,19 @@ hr {
     padding-top: 8px;
   }
   .feture {
-    margin: 40px 25px 80px 25px;
     row-gap: 25px;
   }
   .feture-item .text-small {
-    font-size: 17px;
+    font-size: 15px;
   }
   .feture-item h3 {
-    font-size: 23px;
+    font-size: 20px;
   }
+  .feture-item img {
+    width: 80px;
+    height: 90px;
+    margin: 40px auto 15px auto;
+}
 }
 
 /* ----------------- KEY  FETURE  BOTTOM--------------- */
