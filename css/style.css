@@ -871,6 +871,9 @@ hr {
   font-size: 40px;
   margin: 150px 60px 0px 60px;
 }
+.text-medium span {
+  display: none;
+}
 .key-feture-left .text-large {
   font-weight: 700;
   font-size: 55px;
@@ -921,9 +924,12 @@ hr {
 }
 @media only screen and (max-width: 988px) {
   .text-medium {
-    font-size: 45px;
+    font-size: 30px;
     margin: 50px 25px 0px 25px;
     text-align: center;
+  }
+  .text-medium span {
+    display: inline-block;
   }
   .key-feture {
     display: flex;
@@ -932,11 +938,11 @@ hr {
     margin: 0 25px 0 25px;
   }
   .key-feture-left .text-large {
-    font-size: 45px;
+    display: none;
   }
   .key-feture-right .text-large {
-    font-size: 51px;
-    padding-top: 35px;
+    font-size: 40px;
+    padding-top: 20px;
     text-align: center;
   }
   .key-feture-right-underline {
@@ -952,7 +958,7 @@ hr {
   }
   .feture-item .text-small {
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 35px;
   }
   .feture-item h3 {
@@ -961,14 +967,12 @@ hr {
 }
 @media only screen and (max-width: 640px) {
   .text-medium {
-    font-size: 30px;
+    font-size: 22px;
     margin: 0px 25px;
   }
-  .key-feture-left .text-large {
-    font-size: 30px;
-  }
   .key-feture-right .text-large {
-    font-size: 40px;
+    font-size: 27px;
+    padding-top: 8px;
   }
   .feture {
     margin: 40px 25px 80px 25px;
@@ -1129,50 +1133,33 @@ hr {
   color: #52525b;
 }
 form {
-  width: 60%;
   padding: 70px 0px 0px 50px;
 }
 .form-details {
   line-height: 30px;
 }
-.first-input-box {
+.first-input-box, .second-input-box {
   display: flex;
   justify-content: space-between;
   font-size: 17px;
   margin-bottom: 12px;
   gap: 30px;
 }
-.form-name {
-  width: 50%;
-}
-.form-phone-number {
-  width: 50%;
-}
-.form-name input {
-  width: 100%;
-}
-.form-phone-number input {
-  width: 100%;
-}
-.second-input-box {
-  display: flex;
-  justify-content: space-between;
-  font-size: 17px;
-  margin-bottom: 12px;
-  gap: 30px;
-}
-.form-date {
-  width: 50%;
-}
+.form-name,
+.form-phone-number,
+.form-date,
 .form-doctor-name {
-  width: 50%;
+ width: 100%;
+ margin-top: 10px;
 }
-.form-date input {
+
+.form-name input,
+.form-phone-number input,
+.form-date input, .form-doctor-name select {
   width: 100%;
 }
-.form-doctor-name input {
-  width: 100%;
-}
+ 
+
 .third-input-box {
   width: 100%;
   font-size: 17px;
@@ -1180,29 +1167,25 @@ form {
   line-height: 30px;
 }
 
-.third-input-box textarea {
-  width: 97.5%;
-  height: 10vh;
-  font-size: 20px;
-  border: 2px solid rgba(82, 82, 91, 0.25);
-  border-radius: 6px;
-  padding: 10px 0 0 15px;
-  resize: none;
-}
-.form-details input {
-  width: 95%;
-  height: 50px;
+.form-details input,
+.form-details select,
+.form-textarea textarea {
+  width: -webkit-fill-available;
+  height: 40px;
   font-size: 20px;
   border: 2px solid rgba(82, 82, 91, 0.25);
   color: #52525b;
   border-radius: 6px;
-  padding-left: 15px;
+  padding: 10px 10px;
+}
+.form-textarea textarea{
+  height: 80px;
+}
+.form-details select {
+  height: 62px;
 }
 .form-date input {
-  width: 92%;
-  text-transform: uppercase;
-  color: #52525b;
-  padding-right: 10px;
+    text-transform: uppercase;
 }
 .check-box {
   font-size: 20px;
@@ -1221,16 +1204,7 @@ form {
   font-size: 20px;
   background-color: #516eff;
 }
-select {
-  width: 100%;
-  display: block;
-  height: 55px;
-  font-size: 20px;
-  border: 2px solid rgba(82, 82, 91, 0.25);
-  color: #52525b;
-  border-radius: 6px;
-  padding-left: 15px;
-}
+
 
 @media only screen and (max-width: 1150px) {
   .heading-section-left-underline {
@@ -1271,6 +1245,11 @@ select {
     text-align: center;
     margin: 50px 25px 0 25px;
   }
+  .form-details input,
+.form-details select,
+.form-textarea textarea {
+  font-size: 16px;
+}
   .heading-section-left .text-large {
     font-size: 40px;
     padding-top: 20px;
@@ -1295,13 +1274,15 @@ select {
   }
   
   .form-details input {
-    height: 30px;
-    font-size: 12px;
-  }
-  select {
-    height: 33px;
+    height: 25px;
     font-size: 13px;
   }
+  .form-details select {
+    display: block;
+    height: 50px;
+    font-size: 13px;
+}
+ 
   .first-input-box {
     font-size: 15px;
   }
@@ -1322,7 +1303,7 @@ select {
     font-size: 16px;
   }
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 456px) {
   .text-medium-form {
     font-size: 18px;
   }
@@ -1330,25 +1311,12 @@ select {
     font-size: 21px;
     padding-top: 10px;
   }
-  .first-input-box {
+  .first-input-box, .second-input-box {
     display: block;
   }
-  .form-name {
-    width: 100%;
-  }
-  .form-phone-number {
-    width: 100%;
-    margin-top: 12px;
-  }
-  .second-input-box {
-    display: block;
-  }
-  .form-date {
-    width: 100%;
-    margin-top: 12px;
-  }
-  .form-doctor-name {
-    width: 100%;
-    margin-top: 12px;
-  }
+  .check-box input {
+    transform: scale(1.3);
+    margin: 0 5px 0 5px;
+}
+  
 }
