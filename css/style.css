@@ -1250,6 +1250,10 @@ form {
 .form-textarea textarea {
   font-size: 16px;
 }
+.form-textarea textarea {
+  resize: none;
+}
+
   .heading-section-left .text-large {
     font-size: 40px;
     padding-top: 20px;
